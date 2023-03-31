@@ -73,12 +73,12 @@ body{
     padding: 0 20px;
 }
 
-.price{
+.price .people{
     width: 800px;
     margin: 30px auto;
     
 }
-.price th, .casting th{
+.price th, .people th{
     width: 200px;
 }
 
@@ -99,10 +99,6 @@ body{
     margin: 10px 0;
 }
 
-.people{
-    width: 800px;
-    margin: 0 auto;
-}
 
 .people caption{
     font-size: 18px;
@@ -110,9 +106,9 @@ body{
     margin: 10px auto;
 
 }
-.people th{
+/*.people th{
     width: 40px;
-}
+}*/
 
 
 .people, .people th, .people td{
@@ -133,6 +129,37 @@ body{
 
 .footer p{
     color: white;
+}
+
+/* media query */
+@media screen and (max-width: 360px){
+    #model{
+        width: 320px;
+        left: 50%; /*왼쪽 위치 : 화면의 중앙 */
+        margin-left: -160px; /* 왼쪽 여백 : 사진의 1/2 더 왼쪽으로*/
+    }
+    #model img{
+        width: 100%;
+        
+    }
+    .menu a{
+        font-size: 13px;
+        letter-spacing: -2px;
+    }
+    .price .people{
+        width: 300px;
+   
+    }
+    .price th, .people th{
+        font-size: 14px;
+   
+    }
+
+    .price th, .price td, .people th, .people td{
+        font-size: 14px;
+        letter-spacing: -1px;
+    }
+    
 }
 
 
