@@ -1,3 +1,254 @@
+<<<<<<< HEAD
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.logo{
+    width: 154px;
+    height: 152px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.wide{
+    height: 309px;
+    position: relative; /* 위치 : 상대적으로 */
+    text-align: center;
+    background-color: #0079FF;
+    background-image: url("images/visual-wide.png"); /*배경-이미지 : url(어디에 있는지 / 이미지.형식)*/
+    background-repeat: no-repeat; /* 배경-반복 : 안함 */
+    background-position: center center; /*배경-위치 : 공간에서 수직 수평 */
+
+    /* background: #0079FF url("images/visual-wide.png") no-repeat center center  (한줄로 쓰면 이렇게 가능)*/
+}
+
+#model{
+    position:absolute; /* 위치 : (상대적인 기준점으로부터) 절대 위치*/
+    bottom: 0; 
+}
+
+.menu{
+    background-color: black;
+}
+
+.menu ul{
+    list-style-type: none; /* 목록 -스타일 종류 : 없음(사각형, 채워진 원, 반원) */
+    display:flex; /* 표시 : 플렉스(유연한 구조) */
+    justify-content: center; /* 컨텐츠 정렬: 가로 가운데 */
+    padding: 20px 0;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none; /* 텍스트-꾸밈 : 없음 */
+}
+
+.menu li{
+    padding: 0 20px;
+    font-size: 11px;
+   
+}
+.submenu{
+    border: 1px solid gray;
+    margin-top: 50px;
+    
+
+}
+
+.submenu ul{
+    list-style-type: none; /* 목록 -스타일 종류 : 없음(사각형, 채워진 원, 반원) */
+    display:flex; /* 표시 : 플렉스(유연한 구조) */
+    justify-content: center; /* 컨텐츠 정렬: 가로 가운데 */
+    padding: 20px 0;
+
+}
+
+.submenu a{
+    color: rgb(8, 8, 8);
+    text-decoration: none; /* 텍스트-꾸밈 : 없음 */
+}
+
+.submenu li{
+    padding: 0 20px;
+    font-size: 12px;
+}
+
+
+
+.price .people{
+    width: 800px;
+    margin: 30px auto;
+    
+}
+.price th, .people th{
+    width: 200px;
+}
+
+.price, .price th, .price td{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+
+}
+
+.price th, .price td{
+    padding : 20px 0px;
+    
+}
+
+.price caption, .people caption{
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+.people th{
+    width: 200px;
+}
+
+
+.people, .people th, .people td{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+
+}
+
+.people th, .people td{
+    padding: 10px;
+    text-align: center;
+}
+
+
+.footer{
+    background-color: #000000;
+    text-align: center;
+}
+
+.footer p{
+    color: white;
+}
+.form_title{
+    max-width: 1190px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #0079FF;
+    color: white;
+    text-align: center;
+}
+/*login form style*/
+form, fieldset{
+    border: 0;
+}
+fieldset p{
+    font-size: 15px;
+}
+form{/* mvp.css에서 form의 가로 크기를 제한함으로 이를 해결하기 위한 스타일 */
+    max-width: 100%;
+    width: 100%;
+}
+legend{
+    display: none;
+}
+.form_wrap{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.w-800{
+    max-width: 800px;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+
+.d-flex{ /*가로로 나란히*/
+    display: flex;
+}
+
+.d-flex label{ 
+    text-align: right;
+    margin-right: 1rem;
+    flex: 2 
+}
+
+.d-flex input{ 
+    flex: 8;
+    padding: 1rem 0
+}
+.flex-8{
+    flex: 8
+
+}
+
+.d-flex > div{ /*자손 선택자 : 직계(아들)*/
+    margin-left : 80px;
+}
+
+[type=submit],[type=reset]{ 
+    padding: 5px 20px;
+}
+[type=reset]{
+    margin-left: 1rem;
+    border: 2px solid #0079FF;
+    color:#0079FF;
+    background-color: transparent; /*투명*/
+}
+.divider{
+    margin: 1rem 0; /* 1rem = 16px , Root Element의 약자 */
+}
+
+a, a:link{  /* LOVE HATE 암기 순서 ! link, visible, hover, */
+    color: #0079FF;
+}
+
+/* media query */
+@media screen and (max-width: 360px){
+    #model{
+        width: 320px;
+        left: 50%; /*왼쪽 위치 : 화면의 중앙 */
+        margin-left: -160px; /* 왼쪽 여백 : 사진의 1/2 더 왼쪽으로*/
+    }
+    #model img{
+        width: 100%;
+        
+    }
+   
+    .menu a .submenu a{
+        font-size: 12px;
+        letter-spacing: -2px; /*자간 글자 간격 좁게*/
+    }
+    .price .people{
+        width: 300px;
+ 
+   
+    }
+    .price th, .people th{
+        font-size: 14px;
+        width: 25%;
+     
+    
+    }
+ 
+
+    .price th, .price td, .people th, .people td{
+        font-size: 14px;
+        letter-spacing: -1px;
+    }
+    
+}
+
+
+
+
+=======
 @charset "utf-8";
 *{
     margin: 0;
@@ -138,3 +389,4 @@ body{
 
 
 
+>>>>>>> 0ed3e049271bc8b1e29eb62d8d33deba621bf4f0
