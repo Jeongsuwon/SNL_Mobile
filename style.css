@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @charset "utf-8";
 *{
     margin: 0;
@@ -79,12 +78,12 @@ body{
 
 
 
-.price .people{
+.price{
     width: 800px;
     margin: 30px auto;
     
 }
-.price th, .people th{
+.price th, .casting th{
     width: 200px;
 }
 
@@ -105,9 +104,16 @@ body{
     margin: 10px 0;
 }
 
-.people th{
-    width: 200px;
+
+.people caption{
+    font-size: 18px;
+    font-weight:bolder;
+    margin: 10px auto;
+
 }
+/*.people th{
+    width: 40px;
+}*/
 
 
 .people, .people th, .people td{
@@ -191,6 +197,9 @@ legend{
 .d-flex > div{ /*자손 선택자 : 직계(아들)*/
     margin-left : 80px;
 }
+.ml-0{
+    margin-left: 0 !important; /*다른 어떤것보다 우선 적용(너무 많이 사용x)*/
+}
 
 [type=submit],[type=reset]{ 
     padding: 5px 20px;
@@ -208,6 +217,17 @@ legend{
 a, a:link{  /* LOVE HATE 암기 순서 ! link, visible, hover, */
     color: #0079FF;
 }
+[type=text], [type=password], [type=tel], [type=email]{
+    text-indent: 1rem;
+}
+#reg_promote{
+    margin-bottom: 0;
+    margin-right: 1rem;
+}
+
+
+
+
 
 /* media query */
 @media screen and (max-width: 360px){
@@ -220,23 +240,18 @@ a, a:link{  /* LOVE HATE 암기 순서 ! link, visible, hover, */
         width: 100%;
         
     }
-   
-    .menu a .submenu a{
-        font-size: 12px;
-        letter-spacing: -2px; /*자간 글자 간격 좁게*/
+    .menu a{
+        font-size: 13px;
+        letter-spacing: -2px;
     }
     .price .people{
         width: 300px;
- 
    
     }
     .price th, .people th{
         font-size: 14px;
-        width: 25%;
-     
-    
+   
     }
- 
 
     .price th, .price td, .people th, .people td{
         font-size: 14px;
@@ -248,145 +263,3 @@ a, a:link{  /* LOVE HATE 암기 순서 ! link, visible, hover, */
 
 
 
-=======
-@charset "utf-8";
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    font-family: 'Nanum Gothic Coding', monospace;
-}
-
-.logo{
-    width: 154px;
-    height: 152px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-}
-.wide{
-    height: 309px;
-    position: relative; /* 위치 : 상대적으로 */
-    text-align: center;
-    background-color: #0079FF;
-    background-image: url("images/visual-wide.png"); /*배경-이미지 : url(어디에 있는지 / 이미지.형식)*/
-    background-repeat: no-repeat; /* 배경-반복 : 안함 */
-    background-position: center center; /*배경-위치 : 공간에서 수직 수평 */
-
-    /* background: #0079FF url("images/visual-wide.png") no-repeat center center  (한줄로 쓰면 이렇게 가능)*/
-}
-
-#model{
-    position:absolute; /* 위치 : (상대적인 기준점으로부터) 절대 위치*/
-    bottom: 0; 
-}
-
-.menu{
-    background-color: black;
-}
-
-.menu ul{
-    list-style-type: none; /* 목록 -스타일 종류 : 없음(사각형, 채워진 원, 반원) */
-    display:flex; /* 표시 : 플렉스(유연한 구조) */
-    justify-content: center; /* 컨텐츠 정렬: 가로 가운데 */
-    padding: 20px 0;
-}
-
-.menu a{
-    color: white;
-    text-decoration: none; /* 텍스트-꾸밈 : 없음 */
-}
-
-.menu li{
-    padding: 0 20px;
-}
-.submenu{
-    border: 1px solid gray;
-    margin-top: 50px;
-    
-
-}
-
-.submenu ul{
-    list-style-type: none; /* 목록 -스타일 종류 : 없음(사각형, 채워진 원, 반원) */
-    display:flex; /* 표시 : 플렉스(유연한 구조) */
-    justify-content: center; /* 컨텐츠 정렬: 가로 가운데 */
-    padding: 20px 0;
-
-}
-
-.submenu a{
-    color: rgb(8, 8, 8);
-    text-decoration: none; /* 텍스트-꾸밈 : 없음 */
-}
-
-.submenu li{
-    padding: 0 20px;
-}
-
-.price{
-    width: 800px;
-    margin: 30px auto;
-    
-}
-.price th, .casting th{
-    width: 200px;
-}
-
-.price, .price th, .price td{
-    border: 1px solid #000000;
-    border-collapse: collapse;
-
-}
-
-.price th, .price td{
-    padding : 20px 0px;
-    
-}
-
-.price caption{
-    font-size: 18px;
-    font-weight: bolder;
-    margin: 10px 0;
-}
-
-.people{
-    width: 800px;
-    margin: 0 auto;
-}
-
-.people caption{
-    font-size: 18px;
-    font-weight:bolder;
-    margin: 10px auto;
-
-}
-.people th{
-    width: 40px;
-}
-
-
-.people, .people th, .people td{
-    border: 1px solid #000000;
-    border-collapse: collapse;
-
-}
-
-.people th, .people td{
-    padding: 20px 80px;
-}
-
-
-.footer{
-    background-color: #000000;
-    text-align: center;
-}
-
-.footer p{
-    color: white;
-}
-
-
-
-
->>>>>>> 0ed3e049271bc8b1e29eb62d8d33deba621bf4f0
